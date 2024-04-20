@@ -56,5 +56,10 @@ namespace com.geneg.hairsalon.CharacterFeature
 			localScale = new Vector3(localScale.x, Random.Range(0.7f, 1.2f), localScale.z);
 			this.transform.localScale = localScale;
 		}
+		
+		public void RandomizeFlip()
+		{
+			_spriteRenderer.flipY = Random.Range(0, 2) == 0;
+		}
 	}
 }

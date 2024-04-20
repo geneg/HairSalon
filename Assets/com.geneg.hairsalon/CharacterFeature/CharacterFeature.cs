@@ -22,6 +22,7 @@ namespace com.geneg.hairsalon.CharacterFeature
 			foreach (Hair hair in _view.Hairs)
 			{
 				hair.RandomizeWidth();
+				hair.RandomizeFlip();
 				hair.SetColor(_view.HairColors[Random.Range(0, _view.HairColors.Count)]);
 				hair.SetUpdateDisabled();
 			}
