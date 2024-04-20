@@ -1,3 +1,4 @@
+using com.geneg.hairsalon.CharacterFeature;
 using UnityEngine;
 
 namespace com.geneg.hairsalon.ToolFeature
@@ -7,6 +8,6 @@ namespace com.geneg.hairsalon.ToolFeature
 		// Define the methods and properties that a tool should have
 		string Name { get; set; }
 		void Init();
-		void Apply(GameObject effectedObject);
+		void Apply(Hair effectedObject);
 	}
 }

@@ -8,7 +8,10 @@ namespace com.geneg.hairsalon.CharacterFeature
 {
 	public class Hair : BaseView
 	{
+		public SpriteRenderer SpriteRenderer => _spriteRenderer;
+		public BoxCollider2D Collider => _collider;
 		[SerializeField] SpriteRenderer _spriteRenderer;
+		[SerializeField] BoxCollider2D _collider;
 		
 		private bool _isUpdateEnabled = false;
 		private bool _isTriggered = false;
@@ -33,7 +36,7 @@ namespace com.geneg.hairsalon.CharacterFeature
 		{
 			if (!_isUpdateEnabled || !_isTriggered) return;
 			
-			this.Tool?.Apply(this.gameObject);
+			this.Tool?.Apply(this);
 		}
 
 		public void SetUpdateEnabled()

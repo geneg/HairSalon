@@ -1,4 +1,5 @@
 using System;
+using com.geneg.hairsalon.CharacterFeature;
 using com.geneg.hairsalon.Common;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace com.geneg.hairsalon.ToolFeature.Tools
 			_initialized = true;
 		}
 
-		public abstract void Apply(GameObject effectedObject);
+		public abstract void Apply(Hair effectedObject);
 
 		protected virtual void Update()
 		{

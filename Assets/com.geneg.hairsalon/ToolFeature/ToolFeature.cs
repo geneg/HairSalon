@@ -55,7 +55,7 @@ namespace com.geneg.hairsalon.ToolFeature
 
 		public override void OnDestroy()
 		{
-			
+			GlobalEventBus.Unsubscribe<ToolPanelEvent>(OnToolPanelEvent);
 		}
 		
 	}

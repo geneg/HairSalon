@@ -1,5 +1,6 @@
 
 using System;
+using com.geneg.hairsalon.CharacterFeature;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -21,7 +22,7 @@ namespace com.geneg.hairsalon.ToolFeature.Tools
 			base.Init();
 		}
 		
-		public override void Apply(GameObject effectedObject)
+		public override void Apply(Hair effectedObject)
 		{
 			if (_spriteRenderer.flipX)
 			{

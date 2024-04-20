@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8519921431524195703}
+  _collider: {fileID: 6281725872821058782}
 --- !u!61 &6281725872821058782
 BoxCollider2D:
   m_ObjectHideFlags: 0
