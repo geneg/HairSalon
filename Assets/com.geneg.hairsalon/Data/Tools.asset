@@ -15,3 +15,7 @@ MonoBehaviour:
   toolPrefabs:
   - toolName: Dryer
     prefab: {fileID: 3834366012817923017, guid: 5bf0a6df9680b44f080aca02a840063b, type: 3}
+  - toolName: Scisors
+    prefab: {fileID: 3185431412126193335, guid: 07d083bc4cb994af8a604b0f298178a9, type: 3}
+  - toolName: Grow
+    prefab: {fileID: 969627022634234982, guid: 649d92cf15ab24a8ebe63a9240fbe982, type: 3}
