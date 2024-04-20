@@ -24,10 +24,9 @@ public class EntryPoint : MonoBehaviour
         // FeatureBus is for local message broadcasting within the feature
         
         //list of features
-        // 1. ToolPanel
-        // 2. CharacterFeature
-        // 3. DragAndDropFeature
-        // 4. ToolFeature - create and manage tools on the game scene
+        // 1. ToolPanel - contains tool buttons
+        // 2. CharacterFeature - contains hair objects, head and smile animations
+        // 3. ToolFeature - create and manage tools on the game scene
         _featureResolver.Inject(new EventBus());
         _featureResolver.AddFeature(FeatureType.ToolPanel, new ToolPanelFeature(this.transform), _viewMap.GetView(FeatureType.ToolPanel));
         _featureResolver.AddFeature(FeatureType.ToolFeature, new ToolFeature(this.transform), _viewMap.GetView(FeatureType.ToolFeature));
