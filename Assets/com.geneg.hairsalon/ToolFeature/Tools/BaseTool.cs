@@ -19,6 +19,8 @@ namespace com.geneg.hairsalon.ToolFeature.Tools
 			_initialized = true;
 		}
 
+		public abstract void Apply(GameObject effectedObject);
+
 		protected virtual void Update()
 		{
 			//prevent the tool from being updated if it has not been initialized

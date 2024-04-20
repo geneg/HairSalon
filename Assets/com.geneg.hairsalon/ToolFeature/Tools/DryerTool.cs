@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -18,6 +19,18 @@ namespace com.geneg.hairsalon.ToolFeature.Tools
 			_spritePivot = _spriteRenderer.sprite.pivot.normalized;
 			
 			base.Init();
+		}
+		
+		public override void Apply(GameObject effectedObject)
+		{
+			if (_spriteRenderer.flipX)
+			{
+				effectedObject.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, 240);
+			}
+			else
+			{
+				effectedObject.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, -240);
+			}
 		}
 
 		protected override void Update()
