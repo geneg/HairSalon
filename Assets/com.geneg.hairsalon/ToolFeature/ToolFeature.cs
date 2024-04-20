@@ -37,7 +37,8 @@ namespace com.geneg.hairsalon.ToolFeature
 			{
 				case ToolPanelEvent.ToolSelected:
 					//create a new tool
-					_toolFactory.CreateTool(e.Data); 
+					ITool tool = _toolFactory.CreateTool(e.Data);
+					tool.Init();
 					break;
 				
 				case ToolPanelEvent.ToolDeselected: 
