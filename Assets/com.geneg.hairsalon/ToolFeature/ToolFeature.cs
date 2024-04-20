@@ -39,13 +39,14 @@ namespace com.geneg.hairsalon.ToolFeature
 					//create a new tool
 					ITool tool = _toolFactory.CreateTool(e.Data);
 					tool.Init();
+					GlobalEventBus.Publish(new ToolEvent(ToolEvent.ToolCreated, tool));
 					break;
 				
 				case ToolPanelEvent.ToolDeselected: 
 					//destroy the tool
 					//think about the tool pool!!!
 					//for now it is only 3 tools so just destroy it
-					
+					GlobalEventBus.Publish(new ToolEvent(ToolEvent.ToolDestroyed, e.Data));
 					_toolFactory.DestroyTool(e.Data);
 					break;
 			}

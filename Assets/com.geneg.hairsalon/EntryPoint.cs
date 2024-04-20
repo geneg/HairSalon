@@ -1,5 +1,6 @@
 using System;
 using com.geneg.hairsalon;
+using com.geneg.hairsalon.CharacterFeature;
 using com.geneg.hairsalon.Common;
 using com.geneg.hairsalon.ToolFeature;
 using com.geneg.hairsalon.ToolPanelFeature;
@@ -30,6 +31,7 @@ public class EntryPoint : MonoBehaviour
         _featureResolver.Inject(new EventBus());
         _featureResolver.AddFeature(FeatureType.ToolPanel, new ToolPanelFeature(this.transform), _viewMap.GetView(FeatureType.ToolPanel));
         _featureResolver.AddFeature(FeatureType.ToolFeature, new ToolFeature(this.transform), _viewMap.GetView(FeatureType.ToolFeature));
+        _featureResolver.AddFeature(FeatureType.Character,new CharacterFeature(this.transform), _viewMap.GetView(FeatureType.Character));
     }
 
     // Start is called before the first frame update
@@ -37,6 +39,7 @@ public class EntryPoint : MonoBehaviour
     {
         _featureResolver.GetFeature(FeatureType.ToolPanel).StartFeature();
         _featureResolver.GetFeature(FeatureType.ToolFeature).StartFeature();
+        _featureResolver.GetFeature(FeatureType.Character).StartFeature();
     }
     
     private void OnApplicationQuit()
